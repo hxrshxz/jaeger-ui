@@ -134,8 +134,9 @@ describe('JaegerUIApp', () => {
     expect(getByTestId('search-trace')).toBeInTheDocument();
   });
 
-  it('should handle constructor with props', () => {
-    expect(() => new JaegerUIApp({})).not.toThrow();
+  it('should be a functional component', () => {
+    // JaegerUIApp is now a functional component, verify it's callable
+    expect(typeof JaegerUIApp).toBe('function');
   });
 
   it('should have complete render method coverage', () => {
